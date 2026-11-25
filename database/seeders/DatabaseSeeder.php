@@ -58,7 +58,10 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($bukuData as $buku) {
-            Buku::create($buku);
+            Buku::firstOrCreate(
+                ['judul' => $buku['judul'], 'penulis' => $buku['penulis']],
+                $buku
+            );
         }
 
         // 3. Data Awal Anggota
@@ -91,7 +94,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($anggotaData as $anggota) {
-            Anggota::create($anggota);
+            Anggota::firstOrCreate(['email' => $anggota['email']], $anggota);
         }
     }
 }

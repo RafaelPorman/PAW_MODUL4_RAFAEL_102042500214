@@ -22,7 +22,7 @@ class AdminSeeder extends Seeder
                 'role' => 'admin',
             ],
             [
-                'name' => 'Rio Mahasiswa',
+                'name' => config('app.seed_accounts.student_name'),
                 'email' => config('app.seed_accounts.student_email'),
                 'password' => config('app.seed_accounts.student_password'),
                 'role' => 'mahasiswa',
@@ -36,7 +36,7 @@ class AdminSeeder extends Seeder
                 );
             }
 
-            User::firstOrCreate(
+            User::updateOrCreate(
                 ['email' => $account['email']],
                 [
                     'name' => $account['name'],

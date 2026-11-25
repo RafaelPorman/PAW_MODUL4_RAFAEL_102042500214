@@ -23,13 +23,14 @@ Aplikasi perpustakaan berbasis Laravel untuk mengelola buku, anggota, peminjaman
 4. Atur koneksi database di `.env`, lalu isi kredensial akun seed secara lokal dengan email dan password kuat:
 
    ```dotenv
-   SEED_ADMIN_EMAIL=
+   SEED_ADMIN_EMAIL=admin@telkomlibrary.ac.id
    SEED_ADMIN_PASSWORD=
-   SEED_STUDENT_EMAIL=
+   SEED_STUDENT_EMAIL=mahasiswa@telkomlibrary.ac.id
    SEED_STUDENT_PASSWORD=
+   SEED_STUDENT_NAME="Rafael Porman"
    ```
 
-   Kredensial ini wajib disetel sebelum menjalankan seeder dan tidak boleh dimasukkan ke repository.
+   Isi password yang dipilih secara lokal. Jangan memasukkan password ke repository.
 
 ## Menjalankan aplikasi
 

@@ -89,6 +89,7 @@ return [
         'admin_password' => env('SEED_ADMIN_PASSWORD'),
         'student_email' => env('SEED_STUDENT_EMAIL'),
         'student_password' => env('SEED_STUDENT_PASSWORD'),
+        'student_name' => env('SEED_STUDENT_NAME', 'Rafael Porman'),
     ],
 
     /*
